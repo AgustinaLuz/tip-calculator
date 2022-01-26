@@ -29,6 +29,7 @@ const Card = () => {
   useEffect(() => {
     calculateTotal();
     calculateTip();
+    // eslint-disable-next-line
   }, [bill, total, people, customTip]);
 
   return (
@@ -90,7 +91,10 @@ const Card = () => {
         </div>
       </div>
       <div className="container2">
-        <label id="tip-amount">Tip Amount {tipAmount}</label>
+        <label id="tip-amount">Tip Amount</label>
+        <output className="bill-output" for="bname">
+          {tipAmount}
+        </output>
         <br></br>
         <label id="person">/ person</label>
         <output name="bill-output" for="bname"></output>
@@ -98,7 +102,7 @@ const Card = () => {
         <label id="total">Total</label>
         <br></br>
         <label id="person">/ person</label>
-        <output name="bill-output" for="bname">
+        <output className="bill-output" for="bname">
           {total}
         </output>
         <div className="btn-reset">

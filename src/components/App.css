@@ -130,3 +130,6 @@ button#reset {
   height: 40px;
   border-radius: 4px;
 }
+.bill-output {
+  font-size: 30px;
+}
