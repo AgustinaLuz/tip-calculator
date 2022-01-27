@@ -35,11 +35,10 @@ const Card = () => {
   return (
     <div className="container1">
       <div>
-        <div>
+        <div className="bill-box">
           <label for="bill" id="bill">
             Bill
           </label>
-          <br></br>
           <input
             type="text"
             id="bname"
@@ -49,23 +48,44 @@ const Card = () => {
           ></input>
         </div>
         <div className="buttons-container">
-          <label for="select" id="select">
-            Select Tip %
-          </label>
-          <br></br>
-          <button type="button" onClick={() => setCustomTip(5)}>
+          <div className="select-btn-box">
+            <label for="select" id="select">
+              Select Tip %
+            </label>
+          </div>
+          <button
+            className="tip-btn"
+            type="button"
+            onClick={() => setCustomTip(5)}
+          >
             5%
           </button>
-          <button type="button" onClick={() => setCustomTip(10)}>
+          <button
+            className="tip-btn"
+            type="button"
+            onClick={() => setCustomTip(10)}
+          >
             10%
           </button>
-          <button type="button" onClick={() => setCustomTip(15)}>
+          <button
+            className="tip-btn"
+            type="button"
+            onClick={() => setCustomTip(15)}
+          >
             15%
           </button>
-          <button type="button" onClick={() => setCustomTip(20)}>
+          <button
+            className="tip-btn"
+            type="button"
+            onClick={() => setCustomTip(20)}
+          >
             25%
           </button>
-          <button type="button" onClick={() => setCustomTip(50)}>
+          <button
+            className="tip-btn"
+            type="button"
+            onClick={() => setCustomTip(50)}
+          >
             50%
           </button>
           <input
@@ -77,10 +97,11 @@ const Card = () => {
           ></input>
         </div>
         <div>
-          <label for="numer" id="number">
-            Number of People
-          </label>
-          <br></br>
+          <div className="people-box">
+            <label for="numer" id="number">
+              Number of People
+            </label>
+          </div>
           <input
             type="text"
             id="nname"
@@ -91,20 +112,24 @@ const Card = () => {
         </div>
       </div>
       <div className="container2">
-        <label id="tip-amount">Tip Amount</label>
-        <output className="bill-output" for="bname">
-          {tipAmount}
-        </output>
-        <br></br>
-        <label id="person">/ person</label>
-        <output name="bill-output" for="bname"></output>
-        <br></br>
-        <label id="total">Total</label>
-        <br></br>
-        <label id="person">/ person</label>
-        <output className="bill-output" for="bname">
-          {total}
-        </output>
+        <div className="tip-amount">
+          <div className="tip-amount-box">
+            <label id="tip-amount">Tip Amount</label>
+            <label id="person">/ person</label>
+          </div>
+          <output className="bill-output" for="bname">
+            ${tipAmount}
+          </output>
+        </div>
+        <div className="total-amount">
+          <div className="total-amount-box">
+            <label id="total">Total</label>
+            <label id="person">/ person</label>
+          </div>
+          <output className="bill-output" for="bname">
+            ${total}
+          </output>
+        </div>
         <div className="btn-reset">
           <button type="button" id="reset" onClick={reset}>
             RESET
